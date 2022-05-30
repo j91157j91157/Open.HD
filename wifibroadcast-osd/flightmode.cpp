@@ -58,41 +58,41 @@ const char * rover_mode_from_enum(ROVER_MODE mode) {
 const char * chinese_copter_mode_from_enum(COPTER_MODE mode) {
     switch (mode) {
         case COPTER_MODE_STABILIZE: 
-            return "自   稳"; 
+            return "自   穩"; 
         case COPTER_MODE_ACRO: 
             return "特   技"; 
         case COPTER_MODE_ALT_HOLD: 
             return "定   高"; 
         case COPTER_MODE_AUTO: 
-            return "自   动"; 
+            return "自   動"; 
         case COPTER_MODE_GUIDED: 
             return "指   引"; 
         case COPTER_MODE_LOITER: 
-            return "悬   停"; 
+            return "懸   停"; 
         case COPTER_MODE_RTL: 
             return "返   航"; 
         case COPTER_MODE_CIRCLE: 
-            return "绕   圈"; 
+            return "繞   圈"; 
         case COPTER_MODE_LAND: 
             return "降   落"; 
         case COPTER_MODE_DRIFT: 
-            return "漂   移"; 
+            return "飄   移"; 
         case COPTER_MODE_SPORT: 
-            return "运   动"; 
+            return "運   動"; 
         case COPTER_MODE_FLIP: 
-            return "翻   滚"; 
+            return "翻   滾"; 
         case COPTER_MODE_AUTOTUNE: 
-            return "自 动 调 参"; 
+            return "自 動 調 參"; 
         case COPTER_MODE_POSHOLD: 
-            return "定   点"; 
+            return "定   點"; 
         case COPTER_MODE_BRAKE: 
-            return "制   动"; 
+            return "制   動"; 
         case COPTER_MODE_THROW: 
-            return "抛   飞"; 
+            return "抛   飛"; 
         case COPTER_MODE_AVOID_ADSB: 
             return "避   障"; 
         case COPTER_MODE_GUIDED_NOGPS: 
-            return "无 GPS 指 引"; 
+            return "無 GPS 指 引"; 
         case COPTER_MODE_SMART_RTL:
             return "SMARTRTL";
     }
@@ -146,31 +146,31 @@ const char * copter_mode_from_enum(COPTER_MODE mode) {
 const char * chinese_plane_mode_from_enum(PLANE_MODE mode) {
     switch (mode) {
         case PLANE_MODE_MANUAL:
-            return "手   动";
+            return "手   動";
         case PLANE_MODE_CIRCLE:
-            return "盘   旋";
+            return "盤   旋";
         case PLANE_MODE_STABILIZE:
-            return "自   稳";
+            return "自   穩";
         case PLANE_MODE_TRAINING:
-            return "教   练";
+            return "教   練";
         case PLANE_MODE_ACRO:
             return "特   技";
         case PLANE_MODE_FLY_BY_WIRE_A:
-            return "自   稳";
+            return "自   穩";
         case PLANE_MODE_FLY_BY_WIRE_B:
-            return "自 稳 定 高";
+            return "自 穩 定 高";
         case PLANE_MODE_CRUISE:
             return "巡   航";
         case PLANE_MODE_AUTOTUNE:
-            return "自 动 调 参";
+            return "自 動 調 參";
         case PLANE_MODE_AUTO:
-            return "自   动";
+            return "航   點";
         case PLANE_MODE_RTL:
             return "返   航";
         case PLANE_MODE_LOITER:
-            return "定   点";
+            return "定   點";
         case PLANE_MODE_TAKEOFF:
-            return "TAKEOFF";
+            return "抛   飛";
         case PLANE_MODE_AVOID_ADSB:
             return "AVOIDADSB";
         case PLANE_MODE_GUIDED:
@@ -305,41 +305,41 @@ const char * vot_mode_from_telemetry(uint8_t mode) {
 const char * chinese_ltm_mode_from_telem(int mode) {
     switch (mode) {
         case 0:
-            return "手   动";
+            return "手   動";
         case 1:
             return "RATE";
         case 2:
-            return "自   稳";
+            return "自   穩";
         case 3:
-            return "半 自 稳";
+            return "半 自 穩";
         case 4:
             return "特   技";
         case 5:
-            return "自 稳 1";
+            return "自 穩 1";
         case 6:
-            return "自 稳 2";
+            return "自 穩 2";
         case 7:
-            return "自 稳 3";
+            return "自 穩 3";
         case 8:
             return "定   高";
         case 9:
-            return "GPS 定点";
+            return "GPS 定點";
         case 10:
-            return "自   动";
+            return "自   動";
         case 11:
-            return "无   头";
+            return "無   頭";
         case 12:
-            return "绕   圈";
+            return "繞   圈";
         case 13:
             return "返   航";
         case 14:
-            return "跟   随";
+            return "跟   隨";
         case 15:
             return "降   落";
         case 16:
-            return "线 性 增 稳";
+            return "線 性 增 穩";
         case 17:
-            return "增 稳 定 高";
+            return "增 穩 定 高";
         case 18:
             return "巡   航";
     }

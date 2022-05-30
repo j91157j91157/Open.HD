@@ -669,7 +669,7 @@ void draw_ltm_mode(int mode, int armed, int failsafe, float pos_x, float pos_y, 
 
 
     if (failsafe == 1) {
-        sprintf(buffer, "失 控 保 护");
+        sprintf(buffer, "失 控 保 護");
     } else {
         if (armed == 1) {
             sprintf(buffer, "[%s]", fmode);
@@ -1364,7 +1364,7 @@ void draw_compass(float heading, float home_heading, float pos_x, float pos_y, f
                 draw = true;
 
                 if (CHINESE) {
-                    c = "东";
+                    c = "東";
                 } else {
                     c = "E";
                 }
@@ -2923,7 +2923,7 @@ void draw_Mission(int Seq,float pos_x, float pos_y, float scale){
 
 
     if (CHINESE) {
-        TextEnd(getWidth(pos_x) - width_value, getHeight(pos_y) + getHeight(0.3) * scale, "航 点:", myfont, text_scale * 0.9);
+        TextEnd(getWidth(pos_x) - width_value, getHeight(pos_y) + getHeight(0.3) * scale, "航 點:", myfont, text_scale * 0.9);
     } else {
         TextEnd(getWidth(pos_x) - width_value, getHeight(pos_y) + getHeight(0.3) * scale, "Mission:", myfont, text_scale * 0.9);
     }
@@ -2984,7 +2984,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_1) {
         if (((SenorsEnabled & 0b00000000000000000000000001) == 1) && ((SenorsHealth & 0b00000000000000000000000001) == 0)) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "陀 螺 仪", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "陀 螺 儀", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D GYRO", myfont, text_scale);
             }
@@ -2997,7 +2997,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_2) {
         if (((SenorsEnabled & 0b00000000000000000000000010) >> 1 == 1) && ((SenorsHealth & 0b00000000000000000000000010)) >> 1 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "加 速 度 计", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "加 速 度 計", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D ACCEL", myfont, text_scale);
             }
@@ -3010,7 +3010,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_3) {
         if (((SenorsEnabled & 0b00000000000000000000000100) >> 2 == 1) && ((SenorsHealth & 0b00000000000000000000000100)) >> 2 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "磁 罗 盘", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "磁 羅 盤", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D MAG", myfont, text_scale);
             }
@@ -3023,7 +3023,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_4) {
         if (((SenorsEnabled & 0b00000000000000000000001000) >> 3 == 1) && ((SenorsHealth & 0b00000000000000000000001000)) >> 3 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "空 速 计 静 压", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "空 速 計 靜 壓", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "ABSOLUTE PRESSURE", myfont, text_scale);
             }
@@ -3036,7 +3036,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_5) {
         if (((SenorsEnabled & 0b00000000000000000000010000) >> 4 == 1) && ((SenorsHealth & 0b00000000000000000000010000)) >> 4 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "空 速 计 动 压", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "空 速 計 動 壓", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "DIFFERENTIAL PRESSURE", myfont, text_scale);
             }
@@ -3049,7 +3049,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_6) {
         if (((SenorsEnabled & 0b00000000000000000000100000) >> 5 == 1) && ((SenorsHealth & 0b00000000000000000000100000)) >> 5 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "全 球 定 位 系 统 GPS", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "全 球 定 位 系 統 GPS", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "GPS", myfont, text_scale);
             }
@@ -3062,7 +3062,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_7) {
         if (((SenorsEnabled & 0b00000000000000000001000000) >> 6 == 1) && ((SenorsHealth & 0b00000000000000000001000000)) >> 6 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "光 流 传 感 器", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "光 流 傳 感 器", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "OPTICAL FLOW", myfont, text_scale);
             }
@@ -3075,7 +3075,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_8) {
         if (((SenorsEnabled & 0b00000000000000000010000000) >> 7 == 1) && ((SenorsHealth & 0b00000000000000000010000000)) >> 7 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "视 觉 传 感 器", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "視 覺 傳 感 器", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "VISION POSITION", myfont, text_scale);
             }
@@ -3088,7 +3088,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_9) {
         if (((SenorsEnabled & 0b00000000000000000100000000) >> 8 == 1) && ((SenorsHealth & 0b00000000000000000100000000)) >> 8 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "激 光 传 感 器", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "激 光 傳 感 器", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "LASER POSITION", myfont, text_scale);
             }
@@ -3127,7 +3127,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_12) {
         if (((SenorsEnabled & 0b00000000000000100000000000) >> 11 == 1) && ((SenorsHealth & 0b00000000000000100000000000)) >> 11 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "姿 态 稳 定", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "姿 態 穩 定", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "ATTITUDE STABILIZATION", myfont, text_scale);
             }
@@ -3153,7 +3153,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_14) {
         if (((SenorsEnabled & 0b00000000000010000000000000) >> 13 == 1) && ((SenorsHealth & 0b00000000000010000000000000)) >> 13 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "Z 轴 高 度 控 制", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "Z 軸 高 度 控 制", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "Z ALTITUDE CONTROL", myfont, text_scale);
             }
@@ -3166,7 +3166,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_15) {
         if (((SenorsEnabled & 0b00000000000100000000000000) >> 14 == 1) && ((SenorsHealth & 0b00000000000100000000000000)) >> 14 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "X/Y 轴 位 置 控 制", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "X/Y 軸 位 置 控 制", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "XY POSITION CONTROL", myfont, text_scale);
             }
@@ -3179,7 +3179,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_16) {
         if (((SenorsEnabled & 0b00000000001000000000000000) >> 15 == 1) && ((SenorsHealth & 0b00000000001000000000000000)) >> 15 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "电 机 输 出", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "電 機 輸 出", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "MOTOR OUTPUTS", myfont, text_scale);
             }
@@ -3192,7 +3192,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_17) {
         if (((SenorsEnabled & 0b00000000010000000000000000) >> 16 == 1) && ((SenorsHealth & 0b00000000010000000000000000)) >> 16 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "接 收 机", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "接 收 機", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "RC RECEIVER ", myfont, text_scale);
             }
@@ -3205,7 +3205,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_18) {
         if (((SenorsEnabled & 0b00000000100000000000000000) >> 17 == 1) && ((SenorsHealth & 0b00000000100000000000000000)) >> 17 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 号 陀 螺 仪", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 號 陀 螺 儀", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D GYRO2", myfont, text_scale);
             }
@@ -3218,7 +3218,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_19) {
         if (((SenorsEnabled & 0b00000001000000000000000000) >> 18 == 1) && ((SenorsHealth & 0b00000001000000000000000000)) >> 18 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 号 加 速 度 计", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 號 加 速 度 計", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D ACCEL2", myfont, text_scale);
             }
@@ -3231,7 +3231,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_20) {
         if (((SenorsEnabled & 0b00000010000000000000000000) >> 19 == 1) && ((SenorsHealth & 0b00000010000000000000000000)) >> 19 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 号 磁 罗 盘", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "2 號 磁 羅 盤", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "3D MAG2", myfont, text_scale);
             }
@@ -3244,7 +3244,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_21) {
         if (((SenorsEnabled & 0b00000100000000000000000000) >> 20 == 1) && ((SenorsHealth & 0b00000100000000000000000000)) >> 20 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "地 理 围 栏", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "地 理 圍 欄", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "GEOFENCE", myfont, text_scale);
             }
@@ -3257,7 +3257,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_22) {
         if (((SenorsEnabled & 0b00001000000000000000000000) >> 21 == 1) && ((SenorsHealth & 0b00001000000000000000000000)) >> 21 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "航 姿 参 考 系 统 AHRS", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "航 姿 參 考 系 統 AHRS", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "AHRS", myfont, text_scale);
             }
@@ -3283,7 +3283,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_24) {
         if (((SenorsEnabled & 0b00100000000000000000000000) >> 23 == 1) && ((SenorsHealth & 0b00100000000000000000000000)) >> 23 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "电 机 反 转", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "電 機 反 轉", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "REVERSE MOTOR", myfont, text_scale);
             }
@@ -3296,7 +3296,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_25) {
         if (((SenorsEnabled & 0b01000000000000000000000000) >> 24 == 1) && ((SenorsHealth & 0b01000000000000000000000000)) >> 24 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "日 志 记 录", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "日 誌 記 錄", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "LOGGING", myfont, text_scale);
             }
@@ -3309,7 +3309,7 @@ void draw_Alarm(int SenorsPresent, int SenorsEnabled, int SenorsHealth, float po
     if (ALARM_26) {
         if (((SenorsEnabled & 0b10000000000000000000000000) >> 25 == 1) && ((SenorsHealth & 0b10000000000000000000000000)) >> 25 == 0) {
             if (CHINESE) {
-                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "电 池 传 感 器", myfont, text_scale);
+                TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "電 池 傳 感 器", myfont, text_scale);
             } else {
                 TextEnd(getWidth(pos_x), getHeight(pos_y) + height_text * row, "BATTERY", myfont, text_scale);
             }
